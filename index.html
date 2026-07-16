@@ -4,23 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>만다라트 개인정보처리방침</title>
+    <title>만다라트 개인정보처리방침 | Mandalart Privacy Policy</title>
 
     <meta
         name="description"
         content="만다라트 앱의 개인정보 및 앱 데이터 처리 방식을 안내합니다."
     >
+    <meta
+        name="keywords"
+        content="만다라트, Mandalart, 개인정보처리방침, Privacy Policy"
+    >
+    <meta name="author" content="Mandalart">
+    <meta name="robots" content="index, follow">
+
+    <link
+        rel="canonical"
+        href="https://heesung0326.github.io/privacy-policy/"
+    >
+
+    <meta property="og:type" content="website">
+    <meta
+        property="og:url"
+        content="https://heesung0326.github.io/privacy-policy/"
+    >
+    <meta
+        property="og:title"
+        content="만다라트 개인정보처리방침"
+    >
+    <meta
+        property="og:description"
+        content="만다라트 앱의 개인정보 및 앱 데이터 처리 방식을 안내합니다."
+    >
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:locale:alternate" content="en_US">
+
+    <meta name="theme-color" content="#5f6654">
 
     <style>
         :root {
-            --background: #f7f5f0;
+            --background: #f6f4ef;
             --surface: #ffffff;
+            --surface-soft: #faf9f6;
             --primary: #5f6654;
-            --primary-light: #eef0e8;
-            --text-main: #2f312d;
-            --text-sub: #686b64;
-            --border: #e3e1da;
-            --link: #4f6651;
+            --primary-dark: #444b3c;
+            --primary-soft: #eef0e8;
+            --text-main: #292c27;
+            --text-sub: #686c64;
+            --border: #e2e0d9;
+            --shadow: rgba(49, 53, 45, 0.07);
+            --focus: rgba(95, 102, 84, 0.25);
         }
 
         * {
@@ -43,8 +75,15 @@
                 "Apple SD Gothic Neo",
                 Arial,
                 sans-serif;
+            font-size: 16px;
             line-height: 1.75;
             word-break: keep-all;
+            overflow-wrap: break-word;
+        }
+
+        button,
+        a {
+            -webkit-tap-highlight-color: transparent;
         }
 
         .page {
@@ -52,68 +91,132 @@
             margin: 40px auto;
         }
 
-        .hero {
-            padding: 44px 40px;
+        .hero,
+        .policy-card {
             background: var(--surface);
             border: 1px solid var(--border);
             border-radius: 24px;
-            box-shadow: 0 12px 36px rgba(48, 51, 45, 0.06);
+            box-shadow: 0 12px 38px var(--shadow);
         }
 
-        .app-name {
+        .hero {
+            padding: 42px 40px;
+        }
+
+        .hero-top {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .brand {
             margin: 0 0 8px;
             color: var(--primary);
-            font-size: 16px;
-            font-weight: 700;
-            letter-spacing: 0.04em;
+            font-size: 15px;
+            font-weight: 800;
+            letter-spacing: 0.08em;
         }
 
         h1 {
             margin: 0;
-            font-size: clamp(30px, 5vw, 44px);
-            line-height: 1.25;
-            letter-spacing: -0.04em;
+            font-size: clamp(31px, 5vw, 44px);
+            line-height: 1.22;
+            letter-spacing: -0.045em;
+        }
+
+        .english-title {
+            display: block;
+            margin-top: 8px;
+            color: var(--text-sub);
+            font-size: clamp(17px, 3vw, 21px);
+            font-weight: 600;
+            letter-spacing: -0.015em;
         }
 
         .subtitle {
-            margin: 14px 0 0;
+            margin: 17px 0 0;
             color: var(--text-sub);
-            font-size: 16px;
         }
 
-        .effective-date {
-            display: inline-block;
+        .date-badge {
+            display: inline-flex;
+            align-items: center;
             margin-top: 24px;
-            padding: 8px 14px;
-            background: var(--primary-light);
+            padding: 9px 15px;
+            background: var(--primary-soft);
+            border: 1px solid #e3e6dc;
             border-radius: 999px;
-            color: var(--primary);
+            color: var(--primary-dark);
             font-size: 14px;
-            font-weight: 700;
+            font-weight: 750;
         }
 
-        .content {
-            margin-top: 24px;
-            padding: 16px 40px 40px;
-            background: var(--surface);
+        .language-switch {
+            display: flex;
+            flex-shrink: 0;
+            gap: 6px;
+            padding: 5px;
+            background: var(--surface-soft);
             border: 1px solid var(--border);
-            border-radius: 24px;
-            box-shadow: 0 12px 36px rgba(48, 51, 45, 0.05);
+            border-radius: 14px;
+        }
+
+        .language-button {
+            min-width: 86px;
+            padding: 10px 14px;
+            border: 0;
+            border-radius: 10px;
+            background: transparent;
+            color: var(--text-sub);
+            font: inherit;
+            font-size: 14px;
+            font-weight: 750;
+            cursor: pointer;
+            transition:
+                background 0.18s ease,
+                color 0.18s ease,
+                box-shadow 0.18s ease;
+        }
+
+        .language-button:hover {
+            color: var(--text-main);
+        }
+
+        .language-button.active {
+            background: var(--primary);
+            color: #ffffff;
+            box-shadow: 0 4px 12px rgba(68, 75, 60, 0.16);
+        }
+
+        .language-button:focus-visible,
+        a:focus-visible {
+            outline: 3px solid var(--focus);
+            outline-offset: 3px;
+        }
+
+        .policy-card {
+            margin-top: 24px;
+            padding: 12px 40px 38px;
+        }
+
+        .language-panel[hidden] {
+            display: none;
         }
 
         section {
-            padding: 30px 0;
+            padding: 29px 0;
             border-bottom: 1px solid var(--border);
         }
 
         section:last-child {
-            border-bottom: none;
+            border-bottom: 0;
         }
 
         h2 {
-            margin: 0 0 16px;
+            margin: 0 0 15px;
             font-size: 21px;
-            line-height: 1.4;
+            line-height: 1.45;
             letter-spacing: -0.025em;
         }
 
@@ -122,74 +225,98 @@
         }
 
         ul {
-            margin: 14px 0;
-            padding-left: 22px;
+            margin: 14px 0 4px;
+            padding-left: 23px;
         }
 
         li {
-            margin: 8px 0;
+            margin: 9px 0;
         }
 
         .notice {
-            margin-top: 16px;
+            margin-top: 18px;
             padding: 18px 20px;
-            background: var(--primary-light);
-            border-radius: 14px;
-            color: #484e42;
+            background: var(--primary-soft);
+            border: 1px solid #e3e6dc;
+            border-radius: 15px;
+            color: var(--primary-dark);
         }
 
         .contact-box {
-            margin-top: 14px;
-            padding: 20px;
+            margin-top: 16px;
+            padding: 21px;
+            background: var(--surface-soft);
             border: 1px solid var(--border);
-            border-radius: 14px;
-            background: #fafaf8;
+            border-radius: 15px;
+        }
+
+        .contact-label {
+            display: block;
+            margin-bottom: 6px;
+            color: var(--text-sub);
+            font-size: 13px;
+            font-weight: 750;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
         }
 
         a {
-            color: var(--link);
-            font-weight: 700;
+            color: var(--primary-dark);
+            font-weight: 750;
             text-decoration-thickness: 1px;
-            text-underline-offset: 3px;
-        }
-
-        .english-divider {
-            margin: 36px 0 0;
-            padding: 24px 0 0;
-            border-top: 3px solid var(--primary);
-        }
-
-        .language-title {
-            margin: 0;
-            font-size: 28px;
-            letter-spacing: -0.03em;
+            text-underline-offset: 4px;
         }
 
         footer {
-            padding: 28px 8px 16px;
+            padding: 28px 10px 16px;
             color: var(--text-sub);
             text-align: center;
             font-size: 13px;
         }
 
-        @media (max-width: 640px) {
+        .noscript-message {
+            width: min(920px, calc(100% - 32px));
+            margin: 16px auto 0;
+            padding: 14px 16px;
+            background: #fff8dd;
+            border: 1px solid #eadfae;
+            border-radius: 12px;
+            color: #5f552d;
+        }
+
+        @media (max-width: 720px) {
             .page {
                 width: min(100% - 20px, 920px);
-                margin: 16px auto;
+                margin: 14px auto;
             }
 
             .hero {
-                padding: 32px 24px;
+                padding: 29px 23px;
                 border-radius: 20px;
             }
 
-            .content {
-                padding: 8px 24px 28px;
+            .hero-top {
+                flex-direction: column;
+                gap: 23px;
+            }
+
+            .language-switch {
+                width: 100%;
+            }
+
+            .language-button {
+                flex: 1;
+                min-width: 0;
+            }
+
+            .policy-card {
+                margin-top: 14px;
+                padding: 7px 23px 26px;
                 border-radius: 20px;
             }
 
             section {
-                padding: 26px 0;
+                padding: 25px 0;
             }
 
             h2 {
@@ -200,397 +327,541 @@
                 line-height: 1.7;
             }
         }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            .language-button {
+                transition: none;
+            }
+        }
+
+        @media print {
+            body {
+                background: #ffffff;
+            }
+
+            .page {
+                width: 100%;
+                margin: 0;
+            }
+
+            .hero,
+            .policy-card {
+                border: 0;
+                box-shadow: none;
+            }
+
+            .language-switch {
+                display: none;
+            }
+        }
     </style>
 </head>
 
 <body>
+    <noscript>
+        <div class="noscript-message">
+            언어 전환 기능을 사용하려면 브라우저의 JavaScript를 활성화해 주세요.
+            한국어 개인정보처리방침은 정상적으로 확인할 수 있습니다.
+        </div>
+    </noscript>
+
     <main class="page">
-
         <header class="hero">
-            <p class="app-name">MANDALART</p>
-            <h1>개인정보처리방침</h1>
+            <div class="hero-top">
+                <div>
+                    <p class="brand">MANDALART</p>
 
-            <p class="subtitle">
-                만다라트 앱의 개인정보 및 앱 데이터 처리 방식을 안내합니다.
-            </p>
+                    <h1>
+                        개인정보처리방침
+                        <span class="english-title">Privacy Policy</span>
+                    </h1>
 
-            <div class="effective-date">
-                시행일: 출시일에 입력 예정
+                    <p class="subtitle" id="hero-description">
+                        만다라트 앱의 개인정보 및 앱 데이터 처리 방식을
+                        안내합니다.
+                    </p>
+
+                    <div class="date-badge" id="effective-date">
+                        시행일: 출시일에 입력 예정
+                    </div>
+                </div>
+
+                <div
+                    class="language-switch"
+                    role="group"
+                    aria-label="언어 선택"
+                >
+                    <button
+                        type="button"
+                        class="language-button active"
+                        id="korean-button"
+                        aria-pressed="true"
+                        onclick="showLanguage('ko')"
+                    >
+                        한국어
+                    </button>
+
+                    <button
+                        type="button"
+                        class="language-button"
+                        id="english-button"
+                        aria-pressed="false"
+                        onclick="showLanguage('en')"
+                    >
+                        English
+                    </button>
+                </div>
             </div>
         </header>
 
-        <article class="content">
+        <article class="policy-card">
 
-            <section>
-                <h2>개인정보처리방침 안내</h2>
+            <div
+                id="korean-policy"
+                class="language-panel"
+                lang="ko"
+            >
+                <section>
+                    <h2>개인정보처리방침 안내</h2>
 
-                <p>
-                    본 개인정보처리방침은 만다라트 앱이 사용자의 개인정보와
-                    앱 데이터를 어떤 방식으로 처리하는지 안내하기 위한 것입니다.
-                </p>
-            </section>
+                    <p>
+                        본 개인정보처리방침은 만다라트 앱이 사용자의
+                        개인정보와 앱 데이터를 어떤 방식으로 처리하는지
+                        안내하기 위한 것입니다.
+                    </p>
+                </section>
 
-            <section>
-                <h2>1. 개인정보의 수집</h2>
+                <section>
+                    <h2>1. 개인정보의 수집</h2>
 
-                <p>
-                    본 앱은 회원가입 또는 로그인 기능을 제공하지 않습니다.
-                </p>
+                    <p>
+                        본 앱은 회원가입 또는 로그인 기능을 제공하지 않습니다.
+                    </p>
 
-                <p>
-                    본 앱의 개발자는 사용자의 이름, 이메일 주소, 전화번호,
-                    위치정보, 연락처 등 개인을 식별할 수 있는 정보를
-                    직접 수집하지 않습니다.
-                </p>
-            </section>
+                    <p>
+                        본 앱의 개발자는 사용자의 이름, 이메일 주소,
+                        전화번호, 위치정보, 연락처 등 개인을 식별할 수 있는
+                        정보를 직접 수집하지 않습니다.
+                    </p>
+                </section>
 
-            <section>
-                <h2>2. 앱 데이터의 저장</h2>
+                <section>
+                    <h2>2. 앱 데이터의 저장</h2>
 
-                <p>
-                    사용자가 작성한 만다라트 계획, 목표, 진행 기록,
-                    알림 설정 및 기타 앱 설정은 사용자의 기기 내부 저장소에
-                    저장됩니다.
-                </p>
+                    <p>
+                        사용자가 작성한 만다라트 계획, 목표, 진행 기록,
+                        알림 설정 및 기타 앱 설정은 사용자의 기기 내부
+                        저장소에 저장됩니다.
+                    </p>
 
-                <p>
-                    현재 버전의 본 앱은 인터넷 접속 권한을 요청하지 않으며,
-                    사용자가 입력한 앱 데이터를 개발자가 운영하는 서버로
-                    전송하거나 저장하지 않습니다.
-                </p>
-            </section>
+                    <p>
+                        현재 버전의 본 앱은 인터넷 접속 권한을 요청하지 않으며,
+                        사용자가 입력한 앱 데이터를 개발자가 운영하는 서버로
+                        전송하거나 저장하지 않습니다.
+                    </p>
+                </section>
 
-            <section>
-                <h2>3. 백업 및 기기 이전</h2>
+                <section>
+                    <h2>3. 백업 및 기기 이전</h2>
 
-                <p>
-                    사용자의 기기, Android 버전 및 Google 계정의 백업 설정에 따라
-                    앱 데이터가 Android 자동 백업 서비스 또는 기기 간 데이터 이전
-                    기능을 통해 백업되거나 복원될 수 있습니다.
-                </p>
+                    <p>
+                        사용자의 기기, Android 버전 및 Google 계정의 백업
+                        설정에 따라 앱 데이터가 Android 자동 백업 서비스 또는
+                        기기 간 데이터 이전 기능을 통해 백업되거나 복원될 수
+                        있습니다.
+                    </p>
 
-                <p>
-                    이러한 백업 및 복원 과정은 Android 운영체제와 백업 서비스
-                    제공자에 의해 처리됩니다. 개발자는 백업된 데이터에 직접
-                    접근하거나 이를 별도로 수집하지 않습니다.
-                </p>
+                    <p>
+                        이러한 백업 및 복원 과정은 Android 운영체제와 백업
+                        서비스 제공자에 의해 처리됩니다. 개발자는 백업된
+                        데이터에 직접 접근하거나 이를 별도로 수집하지 않습니다.
+                    </p>
 
-                <p>
-                    사용자는 기기의 백업 설정에서 자동 백업 기능을 관리할 수
-                    있습니다.
-                </p>
-            </section>
+                    <p>
+                        사용자는 기기의 백업 설정에서 자동 백업 기능을 관리할
+                        수 있습니다.
+                    </p>
+                </section>
 
-            <section>
-                <h2>4. 권한 사용</h2>
+                <section>
+                    <h2>4. 권한 사용</h2>
 
-                <p>
-                    본 앱은 다음 기능을 제공하기 위해 필요한 권한을 사용할 수
-                    있습니다.
-                </p>
+                    <p>
+                        본 앱은 다음 기능을 제공하기 위해 필요한 권한을 사용할
+                        수 있습니다.
+                    </p>
 
-                <ul>
-                    <li>
-                        <strong>알림 권한</strong>:
-                        사용자가 설정한 시간에 보따리 알림을 표시하기 위해
-                        사용합니다.
-                    </li>
+                    <ul>
+                        <li>
+                            <strong>알림 권한:</strong>
+                            사용자가 설정한 시간에 보따리 알림을 표시하기 위해
+                            사용합니다.
+                        </li>
 
-                    <li>
-                        <strong>정확한 알람 권한</strong>:
-                        사용자가 지정한 시간에 알림을 제공하기 위해 사용합니다.
-                    </li>
+                        <li>
+                            <strong>정확한 알람 권한:</strong>
+                            사용자가 지정한 시간에 알림을 제공하기 위해
+                            사용합니다.
+                        </li>
 
-                    <li>
-                        <strong>기기 재부팅 감지 권한</strong>:
-                        기기가 재부팅된 이후에도 사용자가 설정한 알림을 다시
-                        등록하기 위해 사용합니다.
-                    </li>
-                </ul>
+                        <li>
+                            <strong>기기 재부팅 감지 권한:</strong>
+                            기기가 재부팅된 이후에도 사용자가 설정한 알림을
+                            다시 등록하기 위해 사용합니다.
+                        </li>
+                    </ul>
 
-                <div class="notice">
-                    현재 버전의 본 앱은 인터넷, 위치, 연락처, 카메라,
-                    마이크 및 외부 저장소 접근 권한을 요청하지 않습니다.
-                </div>
-            </section>
+                    <div class="notice">
+                        현재 버전의 본 앱은 인터넷, 위치, 연락처, 카메라,
+                        마이크 및 외부 저장소 접근 권한을 요청하지 않습니다.
+                    </div>
+                </section>
 
-            <section>
-                <h2>5. 제3자 제공 및 판매</h2>
+                <section>
+                    <h2>5. 제3자 제공 및 판매</h2>
 
-                <p>
-                    본 앱의 개발자는 사용자의 개인정보를 직접 수집하지 않으며,
-                    개인정보 또는 사용자가 입력한 앱 데이터를 제3자에게 제공하거나
-                    판매하지 않습니다.
-                </p>
+                    <p>
+                        본 앱의 개발자는 사용자의 개인정보를 직접 수집하지
+                        않으며, 개인정보 또는 사용자가 입력한 앱 데이터를
+                        제3자에게 제공하거나 판매하지 않습니다.
+                    </p>
 
-                <p>
-                    다만 Android의 자동 백업 및 기기 이전 기능은 Google 등
-                    운영체제 또는 백업 서비스 제공자가 제공하는 시스템 기능을 통해
-                    처리될 수 있습니다.
-                </p>
-            </section>
+                    <p>
+                        다만 Android의 자동 백업 및 기기 이전 기능은 Google 등
+                        운영체제 또는 백업 서비스 제공자가 제공하는 시스템
+                        기능을 통해 처리될 수 있습니다.
+                    </p>
+                </section>
 
-            <section>
-                <h2>6. 광고 및 분석 도구</h2>
+                <section>
+                    <h2>6. 광고 및 분석 도구</h2>
 
-                <p>
-                    현재 버전의 본 앱은 맞춤형 광고를 표시하지 않으며,
-                    Google Analytics, Firebase Analytics, Firebase Crashlytics,
-                    AdMob 등의 광고·분석·오류 수집 서비스를 사용하지 않습니다.
-                </p>
-            </section>
+                    <p>
+                        현재 버전의 본 앱은 맞춤형 광고를 표시하지 않으며,
+                        Google Analytics, Firebase Analytics,
+                        Firebase Crashlytics, AdMob 등의 광고·분석·오류
+                        수집 서비스를 사용하지 않습니다.
+                    </p>
+                </section>
 
-            <section>
-                <h2>7. 데이터 보유 및 삭제</h2>
+                <section>
+                    <h2>7. 데이터 보유 및 삭제</h2>
 
-                <p>
-                    앱 데이터는 사용자의 기기에 저장되며, 개발자가 운영하는
-                    서버에는 보관되지 않습니다.
-                </p>
+                    <p>
+                        앱 데이터는 사용자의 기기에 저장되며, 개발자가
+                        운영하는 서버에는 보관되지 않습니다.
+                    </p>
 
-                <p>
-                    사용자는 앱 내 전체 초기화 기능을 이용해 앱 데이터를 삭제할
-                    수 있습니다. 또한 앱을 삭제하면 기기에 저장된 앱 데이터도
-                    함께 삭제됩니다.
-                </p>
+                    <p>
+                        사용자는 앱 내 전체 초기화 기능을 이용해 앱 데이터를
+                        삭제할 수 있습니다. 또한 앱을 삭제하면 기기에 저장된
+                        앱 데이터도 함께 삭제됩니다.
+                    </p>
 
-                <p>
-                    다만 Android 자동 백업을 통해 보관된 데이터는 사용자의
-                    Google 계정 및 기기 백업 설정에 따라 일정 기간 유지되거나
-                    복원될 수 있습니다. 해당 백업 데이터는 사용자의 계정 및
-                    기기 설정을 통해 관리됩니다.
-                </p>
-            </section>
+                    <p>
+                        다만 Android 자동 백업을 통해 보관된 데이터는 사용자의
+                        Google 계정 및 기기 백업 설정에 따라 일정 기간
+                        유지되거나 복원될 수 있습니다. 해당 백업 데이터는
+                        사용자의 계정 및 기기 설정을 통해 관리됩니다.
+                    </p>
+                </section>
 
-            <section>
-                <h2>8. 아동의 개인정보</h2>
+                <section>
+                    <h2>8. 아동의 개인정보</h2>
 
-                <p>
-                    본 앱은 아동을 포함한 사용자로부터 개인정보를 의도적으로
-                    수집하지 않습니다.
-                </p>
-            </section>
+                    <p>
+                        본 앱은 아동을 포함한 사용자로부터 개인정보를
+                        의도적으로 수집하지 않습니다.
+                    </p>
+                </section>
 
-            <section>
-                <h2>9. 개인정보처리방침의 변경</h2>
+                <section>
+                    <h2>9. 개인정보처리방침의 변경</h2>
 
-                <p>
-                    앱 기능, 권한 또는 데이터 처리 방식이 변경되는 경우
-                    본 개인정보처리방침이 수정될 수 있습니다.
-                </p>
+                    <p>
+                        앱 기능, 권한 또는 데이터 처리 방식이 변경되는 경우
+                        본 개인정보처리방침이 수정될 수 있습니다.
+                    </p>
 
-                <p>
-                    중요한 변경 사항은 앱 내부 또는 개인정보처리방침이 게시된
-                    페이지를 통해 안내합니다.
-                </p>
-            </section>
+                    <p>
+                        중요한 변경 사항은 앱 내부 또는 개인정보처리방침이
+                        게시된 페이지를 통해 안내합니다.
+                    </p>
+                </section>
 
-            <section>
-                <h2>10. 문의</h2>
+                <section>
+                    <h2>10. 문의</h2>
 
-                <p>
-                    개인정보처리방침 또는 앱 이용과 관련된 문의는 아래 이메일로
-                    보내주시기 바랍니다.
-                </p>
+                    <p>
+                        개인정보처리방침 또는 앱 이용과 관련된 문의는 아래
+                        이메일로 보내주시기 바랍니다.
+                    </p>
 
-                <div class="contact-box">
-                    <strong>문의 이메일</strong><br>
-                    <a href="mailto:app.help.0326@gmail.com">
-                        app.help.0326@gmail.com
-                    </a>
-                </div>
-            </section>
+                    <div class="contact-box">
+                        <span class="contact-label">Email</span>
 
-            <div class="english-divider">
-                <p class="app-name">MANDALART</p>
-                <h2 class="language-title">Privacy Policy</h2>
+                        <a href="mailto:app.help.0326@gmail.com">
+                            app.help.0326@gmail.com
+                        </a>
+                    </div>
+                </section>
             </div>
 
-            <section>
-                <h2>Introduction</h2>
+            <div
+                id="english-policy"
+                class="language-panel"
+                lang="en"
+                hidden
+            >
+                <section>
+                    <h2>Privacy Policy Overview</h2>
 
-                <p>
-                    This Privacy Policy explains how the Mandalart application
-                    handles personal information and application data.
-                </p>
-            </section>
+                    <p>
+                        This Privacy Policy explains how the Mandalart
+                        application handles personal information and
+                        application data.
+                    </p>
+                </section>
 
-            <section>
-                <h2>1. Collection of Personal Information</h2>
+                <section>
+                    <h2>1. Collection of Personal Information</h2>
 
-                <p>
-                    The application does not provide account registration or
-                    login features.
-                </p>
+                    <p>
+                        The application does not provide account registration
+                        or login features.
+                    </p>
 
-                <p>
-                    The developer does not directly collect personally
-                    identifiable information such as the user's name, email
-                    address, telephone number, location, contacts, or similar
-                    information.
-                </p>
-            </section>
+                    <p>
+                        The developer does not directly collect personally
+                        identifiable information such as the user's name,
+                        email address, telephone number, location, contacts,
+                        or similar information.
+                    </p>
+                </section>
 
-            <section>
-                <h2>2. Storage of Application Data</h2>
+                <section>
+                    <h2>2. Storage of Application Data</h2>
 
-                <p>
-                    Mandalart plans, goals, progress records, notification
-                    settings, and other application settings created by the
-                    user are stored locally on the user's device.
-                </p>
+                    <p>
+                        Mandalart plans, goals, progress records, notification
+                        settings, and other application settings created by
+                        the user are stored locally on the user's device.
+                    </p>
 
-                <p>
-                    The current version of the application does not request
-                    internet access permission and does not transmit or store
-                    user-entered application data on a server operated by the
-                    developer.
-                </p>
-            </section>
+                    <p>
+                        The current version of the application does not request
+                        internet access permission and does not transmit or
+                        store user-entered application data on a server
+                        operated by the developer.
+                    </p>
+                </section>
 
-            <section>
-                <h2>3. Backup and Device Transfer</h2>
+                <section>
+                    <h2>3. Backup and Device Transfer</h2>
 
-                <p>
-                    Depending on the user's device, Android version, Google
-                    Account, and backup settings, application data may be
-                    backed up or restored through Android's automatic backup
-                    or device-to-device transfer features.
-                </p>
+                    <p>
+                        Depending on the user's device, Android version,
+                        Google Account, and backup settings, application data
+                        may be backed up or restored through Android automatic
+                        backup or device-to-device transfer features.
+                    </p>
 
-                <p>
-                    These processes are handled by the Android operating system
-                    and the applicable backup service provider. The developer
-                    does not directly access or separately collect the backed-up
-                    data.
-                </p>
-            </section>
+                    <p>
+                        These processes are handled by the Android operating
+                        system and the applicable backup service provider.
+                        The developer does not directly access or separately
+                        collect the backed-up data.
+                    </p>
 
-            <section>
-                <h2>4. Permissions</h2>
+                    <p>
+                        Users can manage automatic backup through their device
+                        backup settings.
+                    </p>
+                </section>
 
-                <p>
-                    The application may use the following permissions to
-                    provide its features:
-                </p>
+                <section>
+                    <h2>4. Permissions</h2>
 
-                <ul>
-                    <li>
-                        <strong>Notification permission:</strong>
-                        Used to display reminders at times selected by the user.
-                    </li>
+                    <p>
+                        The application may use the following permissions to
+                        provide its features:
+                    </p>
 
-                    <li>
-                        <strong>Exact alarm permission:</strong>
-                        Used to provide reminders at the time selected by the
-                        user.
-                    </li>
+                    <ul>
+                        <li>
+                            <strong>Notification permission:</strong>
+                            Used to display reminders at times selected by the
+                            user.
+                        </li>
 
-                    <li>
-                        <strong>Device reboot detection:</strong>
-                        Used to restore scheduled reminders after the device
-                        restarts.
-                    </li>
-                </ul>
+                        <li>
+                            <strong>Exact alarm permission:</strong>
+                            Used to provide reminders at the time selected by
+                            the user.
+                        </li>
 
-                <div class="notice">
-                    The current version of the application does not request
-                    internet, location, contacts, camera, microphone, or
-                    external storage access permissions.
-                </div>
-            </section>
+                        <li>
+                            <strong>Device reboot detection:</strong>
+                            Used to restore scheduled reminders after the
+                            device restarts.
+                        </li>
+                    </ul>
 
-            <section>
-                <h2>5. Sharing or Sale of Data</h2>
+                    <div class="notice">
+                        The current version of the application does not request
+                        internet, location, contacts, camera, microphone, or
+                        external storage access permissions.
+                    </div>
+                </section>
 
-                <p>
-                    The developer does not directly collect personal
-                    information and does not share or sell personal information
-                    or user-entered application data to third parties.
-                </p>
+                <section>
+                    <h2>5. Sharing or Sale of Data</h2>
 
-                <p>
-                    Android backup or device transfer may be processed through
-                    system services provided by Google or another operating
-                    system or backup service provider.
-                </p>
-            </section>
+                    <p>
+                        The developer does not directly collect personal
+                        information and does not share or sell personal
+                        information or user-entered application data to third
+                        parties.
+                    </p>
 
-            <section>
-                <h2>6. Advertising and Analytics</h2>
+                    <p>
+                        Android backup or device transfer may be processed
+                        through system services provided by Google or another
+                        operating system or backup service provider.
+                    </p>
+                </section>
 
-                <p>
-                    The current version of the application does not display
-                    personalized advertising and does not use advertising,
-                    analytics, or crash-reporting services such as Google
-                    Analytics, Firebase Analytics, Firebase Crashlytics, or
-                    AdMob.
-                </p>
-            </section>
+                <section>
+                    <h2>6. Advertising and Analytics</h2>
 
-            <section>
-                <h2>7. Data Retention and Deletion</h2>
+                    <p>
+                        The current version of the application does not display
+                        personalized advertising and does not use advertising,
+                        analytics, or crash-reporting services such as Google
+                        Analytics, Firebase Analytics, Firebase Crashlytics,
+                        or AdMob.
+                    </p>
+                </section>
 
-                <p>
-                    Application data is stored on the user's device and is not
-                    retained on a server operated by the developer.
-                </p>
+                <section>
+                    <h2>7. Data Retention and Deletion</h2>
 
-                <p>
-                    Users may delete application data using the reset feature
-                    within the application. Uninstalling the application also
-                    deletes locally stored application data.
-                </p>
+                    <p>
+                        Application data is stored on the user's device and is
+                        not retained on a server operated by the developer.
+                    </p>
 
-                <p>
-                    Data retained through Android automatic backup may remain
-                    available or may be restored depending on the user's Google
-                    Account and device backup settings.
-                </p>
-            </section>
+                    <p>
+                        Users may delete application data using the reset
+                        feature within the application. Uninstalling the
+                        application also deletes locally stored application
+                        data.
+                    </p>
 
-            <section>
-                <h2>8. Children's Privacy</h2>
+                    <p>
+                        Data retained through Android automatic backup may
+                        remain available or may be restored depending on the
+                        user's Google Account and device backup settings.
+                        Such backup data is managed through the user's account
+                        and device settings.
+                    </p>
+                </section>
 
-                <p>
-                    The application does not intentionally collect personal
-                    information from users, including children.
-                </p>
-            </section>
+                <section>
+                    <h2>8. Children's Privacy</h2>
 
-            <section>
-                <h2>9. Changes to This Privacy Policy</h2>
+                    <p>
+                        The application does not intentionally collect personal
+                        information from users, including children.
+                    </p>
+                </section>
 
-                <p>
-                    This Privacy Policy may be updated if the application's
-                    features, permissions, or data-handling practices change.
-                    Important changes may be announced within the application or
-                    on this page.
-                </p>
-            </section>
+                <section>
+                    <h2>9. Changes to This Privacy Policy</h2>
 
-            <section>
-                <h2>10. Contact</h2>
+                    <p>
+                        This Privacy Policy may be updated if the application's
+                        features, permissions, or data-handling practices
+                        change.
+                    </p>
 
-                <p>
-                    For questions regarding this Privacy Policy or the
-                    application, please contact:
-                </p>
+                    <p>
+                        Important changes may be announced within the
+                        application or on this page.
+                    </p>
+                </section>
 
-                <div class="contact-box">
-                    <strong>Email</strong><br>
-                    <a href="mailto:app.help.0326@gmail.com">
-                        app.help.0326@gmail.com
-                    </a>
-                </div>
-            </section>
+                <section>
+                    <h2>10. Contact</h2>
 
+                    <p>
+                        For questions regarding this Privacy Policy or the
+                        application, please contact:
+                    </p>
+
+                    <div class="contact-box">
+                        <span class="contact-label">Email</span>
+
+                        <a href="mailto:app.help.0326@gmail.com">
+                            app.help.0326@gmail.com
+                        </a>
+                    </div>
+                </section>
+            </div>
         </article>
 
         <footer>
             © 2026 Mandalart. All rights reserved.
         </footer>
-
     </main>
+
+    <script>
+        function showLanguage(language) {
+            const koreanPanel = document.getElementById("korean-policy");
+            const englishPanel = document.getElementById("english-policy");
+
+            const koreanButton = document.getElementById("korean-button");
+            const englishButton = document.getElementById("english-button");
+
+            const description = document.getElementById("hero-description");
+            const effectiveDate = document.getElementById("effective-date");
+
+            const isKorean = language === "ko";
+
+            koreanPanel.hidden = !isKorean;
+            englishPanel.hidden = isKorean;
+
+            koreanButton.classList.toggle("active", isKorean);
+            englishButton.classList.toggle("active", !isKorean);
+
+            koreanButton.setAttribute(
+                "aria-pressed",
+                String(isKorean)
+            );
+
+            englishButton.setAttribute(
+                "aria-pressed",
+                String(!isKorean)
+            );
+
+            document.documentElement.lang = isKorean ? "ko" : "en";
+
+            description.textContent = isKorean
+                ? "만다라트 앱의 개인정보 및 앱 데이터 처리 방식을 안내합니다."
+                : "This page explains how the Mandalart application handles personal information and application data.";
+
+            effectiveDate.textContent = isKorean
+                ? "시행일: 출시일에 입력 예정"
+                : "Effective date: To be entered on the release date";
+
+            document.title = isKorean
+                ? "만다라트 개인정보처리방침 | Mandalart Privacy Policy"
+                : "Mandalart Privacy Policy | 개인정보처리방침";
+        }
+    </script>
 </body>
 </html>
